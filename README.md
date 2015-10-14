@@ -1,6 +1,6 @@
 # SuperFixer-Xcode
 
-An Xcode plug-in which adds calls to super, in certains methods like ´viewDidLoad´ etc. The plugin was inspired by [this tweet](https://twitter.com/jakemarsh/status/651818475610968064) by @jakemarsh, and have been created by [@johankj](https://twitter.com/johankj).
+An Xcode plug-in for Swift projects, which adds calls to `super` in certains methods like `viewDidLoad` etc. The plugin was inspired by [this tweet](https://twitter.com/jakemarsh/status/651818475610968064) by @jakemarsh, and have been created by [@johankj](https://twitter.com/johankj).
 
 ## Installation
 
@@ -17,7 +17,7 @@ $ xcodebuild
 
 Just use autocompletion like you normally would.
 
-Whenever you complete an autocomplete, the plugin will look through `Resources/SuperSubstitutions.plist` to find a match. If a match is found, the current autocomplete is replaced with the one defined in the plist.
+Whenever you complete an autocomplete suggestion, the plugin will look through `Resources/SuperSubstitutions.plist` to find a match. If a match is found, the current autocomplete suggestion is replaced with the one defined in the plist.
 
 
 ## New Xcode releases
