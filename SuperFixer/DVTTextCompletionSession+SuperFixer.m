@@ -7,9 +7,8 @@
 //
 
 #import "DVTTextCompletionSession+SuperFixer.h"
-#import "JRSwizzle.h"
-
 #import "DVTTextCompletionItem-Protocol.h"
+#import "JRSwizzle.h"
 #import "SFCompletionItem.h"
 
 @implementation DVTTextCompletionSession (SuperFixer)
