@@ -10,7 +10,6 @@
 #import "DVTTextCompletionSession+SuperFixer.m"
 
 @interface SuperFixer()
-
 @property (nonatomic, strong, readwrite) NSBundle *bundle;
 @end
 
@@ -24,6 +23,7 @@
     if (self = [super init]) {
         // reference to plugin's bundle, for resource access
         self.bundle = plugin;
+        sharedPlugin = self;
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(didApplicationFinishLaunchingNotification:)
                                                      name:NSApplicationDidFinishLaunchingNotification
@@ -32,33 +32,16 @@
     return self;
 }
 
-- (void)didApplicationFinishLaunchingNotification:(NSNotification*)noti {
-    //removeObserver
+- (void)didApplicationFinishLaunchingNotification:(NSNotification *)noti {
+    // Remove observer
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSApplicationDidFinishLaunchingNotification object:nil];
     
-    // Create menu items, initialize UI, etc.
-    // Sample Menu Item:
-    NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Edit"];
-    if (menuItem) {
-        [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Do Action" action:@selector(doMenuAction) keyEquivalent:@""];
-        //[actionMenuItem setKeyEquivalentModifierMask:NSAlphaShiftKeyMask | NSControlKeyMask];
-        [actionMenuItem setTarget:self];
-        [[menuItem submenu] addItem:actionMenuItem];
-    }
+    // Load Substitutions from Resources/Substitutions.plist
+    NSString *superSubstitutionsPath = [self.bundle pathForResource:@"SuperSubstitutions" ofType:@"plist"];
+    self.substitutions = [NSDictionary dictionaryWithContentsOfFile:superSubstitutionsPath][@"Substitutions"];
     
+    // Swizzle some methods
     [DVTTextCompletionSession sf_swizzleMethods];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
-    
-}
-
-// Sample Action, for menu item:
-- (void)doMenuAction {
-    NSAlert *alert = [[NSAlert alloc] init];
-    [alert setMessageText:@"Hello, World"];
-    [alert runModal];
 }
 
 - (void)dealloc {

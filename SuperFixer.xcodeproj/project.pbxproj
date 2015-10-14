@@ -18,6 +18,7 @@
 		04D3CBE91BCDB323000205FC /* DVTFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D3CBE81BCDB323000205FC /* DVTFoundation.framework */; };
 		04D3CBED1BCDB332000205FC /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D3CBEB1BCDB332000205FC /* IDEKit.framework */; };
 		04D3CBF21BCE7E85000205FC /* SFCompletionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3CBF11BCE7E85000205FC /* SFCompletionItem.m */; settings = {ASSET_TAGS = (); }; };
+		04D3FA651BCE9EC3004D091F /* SuperSubstitutions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04D3FA621BCE99E1004D091F /* SuperSubstitutions.plist */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		04D3CBEF1BCDB4DF000205FC /* SuperFixer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SuperFixer-Prefix.pch"; sourceTree = "<group>"; };
 		04D3CBF01BCE7E85000205FC /* SFCompletionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFCompletionItem.h; sourceTree = "<group>"; };
 		04D3CBF11BCE7E85000205FC /* SFCompletionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFCompletionItem.m; sourceTree = "<group>"; };
+		04D3FA621BCE99E1004D091F /* SuperSubstitutions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SuperSubstitutions.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				044B4C311BCDACF90031C6B4 /* SuperFixer */,
+				04D3FA641BCE99EC004D091F /* Resources */,
 				044B4C2C1BCDACF90031C6B4 /* Frameworks */,
 				044B4C2B1BCDACF90031C6B4 /* Products */,
 			);
@@ -98,12 +101,12 @@
 				04D3CBCE1BCDAE08000205FC /* XcodeHeaders */,
 				044B4C351BCDACF90031C6B4 /* SuperFixer.h */,
 				044B4C361BCDACF90031C6B4 /* SuperFixer.m */,
-				044B4C381BCDACF90031C6B4 /* NSObject_Extension.h */,
-				044B4C391BCDACF90031C6B4 /* NSObject_Extension.m */,
 				04D3CBE31BCDB23A000205FC /* DVTTextCompletionSession+SuperFixer.h */,
 				04D3CBE41BCDB23A000205FC /* DVTTextCompletionSession+SuperFixer.m */,
 				04D3CBF01BCE7E85000205FC /* SFCompletionItem.h */,
 				04D3CBF11BCE7E85000205FC /* SFCompletionItem.m */,
+				044B4C381BCDACF90031C6B4 /* NSObject_Extension.h */,
+				044B4C391BCDACF90031C6B4 /* NSObject_Extension.m */,
 				044B4C321BCDACF90031C6B4 /* Supporting Files */,
 			);
 			path = SuperFixer;
@@ -137,6 +140,15 @@
 				04D3CBDE1BCDAE2F000205FC /* JRSwizzle.m */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		04D3FA641BCE99EC004D091F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04D3FA621BCE99E1004D091F /* SuperSubstitutions.plist */,
+			);
+			name = Resources;
+			path = SuperFixer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				044B4C341BCDACF90031C6B4 /* SuperFixer.xcscheme in Resources */,
+				04D3FA651BCE9EC3004D091F /* SuperSubstitutions.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

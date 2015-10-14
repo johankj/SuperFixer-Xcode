@@ -17,5 +17,6 @@ static SuperFixer *sharedPlugin;
 + (instancetype)sharedPlugin;
 - (id)initWithBundle:(NSBundle *)plugin;
 
-@property (nonatomic, strong, readonly) NSBundle* bundle;
+@property (nonatomic, strong, readonly) NSBundle *bundle;
+@property (nonatomic, strong) NSArray<NSDictionary<NSString*, NSString*>*> *substitutions;
 @end

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Substitutions</key>
+	<array>
+		<dict>
+			<key>Find</key>
+			<string>override func viewWillAppear(animated: Bool) {\n&lt;#code#&gt;\n}</string>
+			<key>Replace</key>
+			<string>override func viewWillAppear(animated: Bool) {\nsuper.viewWillAppear(animated)\n&lt;#code#&gt;\n}</string>
+		</dict>
+		<dict>
+			<key>Find</key>
+			<string>override func viewDidLoad() {\n&lt;#code#&gt;\n}</string>
+			<key>Replace</key>
+			<string>override func viewDidLoad() {\nsuper.viewDidLoad()\n&lt;#code#&gt;\n}</string>
+		</dict>
+	</array>
+</dict>
+</plist>
