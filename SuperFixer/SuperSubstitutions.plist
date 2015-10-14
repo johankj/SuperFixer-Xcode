@@ -20,7 +20,7 @@
 			<key>Find</key>
 			<string>override func viewDidLoad() {\n&lt;#code#&gt;\n}</string>
 			<key>Replace</key>
-			<string>override func viewDidLoad() {\nsuper.viewDidLoad()\n&lt;#code#&gt;\n}</string>
+			<string>override func viewDidLoad() {\n&lt;#code#&gt;\nsuper.viewDidLoad()\n}</string>
 		</dict>
 	</array>
 </dict>
