@@ -4,7 +4,11 @@ An Xcode plug-in for Swift projects, which adds calls to `super` in certains met
 
 ## Installation
 
-Clone the repo. Then build and run the Xcode project and the plug-in will automatically be installed in `~/Library/Application Support/Developer/Shared/Xcode/Plug-ins`. Relaunch Xcode.
+You can install it via [Alcatraz](http://alcatraz.io/) by opening the Alcatraz Package Manager and search for SuperFixer.
+
+Alternatively you can download the [latest release](https://github.com/johankj/SuperFixer-Xcode/releases) and place it into `~/Library/Application Support/Developer/Shared/Xcode/Plug-ins`.
+
+If you clone the repo and build the Xcode project, the plug-in will also be installed automatically.
 
 ```
 $ git clone https://github.com/johankj/SuperFixer-Xcode.git
